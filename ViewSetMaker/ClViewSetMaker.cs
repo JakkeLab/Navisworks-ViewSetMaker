@@ -11,11 +11,12 @@ namespace ViewSetMaker
     /// <summary>
     /// Addin Info
     /// </summary>
-    [Plugin("ViewSetMaker", "Keeleys95", DisplayName = "ViewSetMaker")]
+    [Plugin("ViewSetMaker", "JakkeLab", DisplayName = "ViewSetMaker")]
     [RibbonLayout("AddinRibbon.xaml")]
     [RibbonTab("ID_CustomTab_1", DisplayName = "ViewSetMaker")]
     [Command("ID_Button_1", Icon = "1_16.png", LargeIcon = "1_32.png", ToolTip = "Create Viewpoint List at once")]
     ///Command(buttonId at XAML button, name of Icon IMG, name of Icon IMG, ToolTips)
+    ///No button appears when the value of buttonId is wrong.
 
     /// Define Addin tab
     public class ClViewSetMaker : CommandHandlerPlugin
@@ -31,7 +32,7 @@ namespace ViewSetMaker
                         
                         if (pluginRecord is DockPanePluginRecord && pluginRecord.IsEnabled)
                         {
-                            var docPanel = (DockPanePlugin)(pluginRecord.LoadedPlugin ?? pluginRecord.LoadPlugin()); // Load plugin when PluginRecord.LoadedPlugin is Null
+                            var docPanel = (DockPanePlugin)(pluginRecord.LoadedPlugin ?? pluginRecord.LoadPlugin()); // Load plugin when status of loading plugin(= PluginRecord.LoadedPlugin) is Null
                             docPanel.ActivatePane();
                         }
 
@@ -48,7 +49,7 @@ namespace ViewSetMaker
 
 namespace AddinDockPanel
 {
-    [Plugin("ViewSetMakerDockPanel", "Keeleys95", DisplayName = "ViewSetMaker")] //Define Plugin's name, developer, display name
+    [Plugin("ViewSetMakerDockPanel", "JakkeLab", DisplayName = "ViewSetMaker")] //Define Plugin's name, developer, display name
     [DockPanePlugin(235, 500, AutoScroll = true, MinimumHeight = 500, MinimumWidth = 235)]
 
     public class ViewSetMakerDockPanel : DockPanePlugin
