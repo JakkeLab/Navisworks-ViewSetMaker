@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Autodesk.Navisworks.Api;
+using Autodesk.Navisworks.Api.Interop.ComApi;
+using Autodesk.Navisworks.Api.ComApi;
 using NavisworksApp = Autodesk.Navisworks.Api.Application;
 
 
@@ -211,11 +213,180 @@ namespace ViewSetMaker.Ctr
             }
         }
 
+        public static string LastIsolatedName { get; private set; }
+
+        //Save ViewPoint
+        private void SaveViewpoint()
+        {
+            var acd = NavisworksApp.ActiveDocument;
+            try
+            {
+                var state = ComApiBridge.State;
+                var cv = state.CurrentView.Copy();
+                var vp = state.ObjectFactory(nwEObjectType.eObjectType_nwOpView);
+                var view = vp as InwOpView;
+                if (view != null) view.ApplyHideAttribs = true;
+                view.ApplyMaterialAttribs = true;
+                vp.Name = LastIsolatedName;
+                vp.anonview = cv;
+                state.SavedViews().Add(vp);
+            }
+            catch(Exception)
+            {
+
+            }
+        }
+
+
+        //Create Hide Item
+        private void HideItemsByFloor(int entFloor, int stnFloor, string dongName, bool IsHideForEnt)
+        {
+            var DongItemSet = new ModelItemCollection();
+            var HideFloorListEnt = new List<int>();
+            var HideFloorListStn = new List<int>();
+
+            //Find Highest Level
+            foreach (var item in NavisworksApp.ActiveDocument.Models.RootItems)
+            {
+                var cat = item.DescendantsAndSelf.Where(i => i.PropertyCategories.FindCategoryByDisplayName(tbBHCategory.Text) != null);
+                var FloorObj = cat.Where(m => m.PropertyCategories.FindCategoryByDisplayName(tbBHCategory.Text).
+                                                Properties.FindPropertyByDisplayName(tbFloornumCat.Text) != null &&
+                                              m.PropertyCategories.FindCategoryByDisplayName(tbBHCategory.Text).
+                                                Properties.FindPropertyByDisplayName(tbBHDongTypeName.Text).ToString() == dongName);
+                foreach (var modelObj in FloorObj)
+                {
+                    DongItemSet.Add(modelObj);
+                    foreach (var categoryName in modelObj.PropertyCategories)
+                    {
+                        foreach (var floorPropValue in categoryName.Properties.Where(i => i.DisplayName == tbFloornumCat.Text))
+                        {
+                            string ModelFloorString = GetPropValue(floorPropValue);
+                            int ModelFloorNum;
+                            int.TryParse(ModelFloorString, out ModelFloorNum);
+                            if(HideFloorListEnt.Contains(ModelFloorNum) == false)
+                            {
+                                HideFloorListEnt.Add(ModelFloorNum);
+                            }
+                            HideFloorListEnt.Add(ModelFloorNum);
+
+                            if (HideFloorListStn.Contains(ModelFloorNum) == false)
+                            {
+                                HideFloorListStn.Add(ModelFloorNum);
+                            }
+                        }
+                    }
+                }
+            }
+
+        /* 22.09.15
+        FloorObj cannot be added.
+         */
+
+            //Create sets containing floor numbers not to hide
+            foreach (int fl in HideFloorListEnt)
+            {
+                if (fl < entFloor+1)
+                {
+                    HideFloorListEnt.Remove(fl);
+                }
+            }
+
+            foreach (int fl in HideFloorListStn)
+            {
+                if (fl < stnFloor + 1)
+                {
+                    HideFloorListStn.Remove(fl);
+                }
+            }
+
+            //Select item to Hide
+            var HideItemSetEnt = new ModelItemCollection();
+            var HideItemSetStn = new ModelItemCollection();
+            foreach (var item1 in DongItemSet)
+            {
+                int flNumInt;
+                var info = item1.PropertyCategories.FindCategoryByDisplayName(tbBHCategory.Text).Properties.FindPropertyByDisplayName(tbFloornumCat.Text);
+                string flString = GetPropValue(info);
+                int.TryParse(flString, out flNumInt);
+                if (HideFloorListEnt.Contains(flNumInt) == true)
+                {
+                    HideItemSetEnt.Add(item1);
+                }
+            }
+
+            foreach (var item in DongItemSet)
+            {
+                int flNumInt;
+                var info = item.PropertyCategories.FindCategoryByDisplayName(tbBHCategory.Text).Properties.FindPropertyByDisplayName(tbFloornumCat.Text);
+                string flString = GetPropValue(info);
+                int.TryParse(flString, out flNumInt);
+                if (HideFloorListStn.Contains(flNumInt) == true)
+                {
+                    HideItemSetStn.Add(item);
+                }
+            }
+            NavisworksApp.ActiveDocument.CurrentSelection.Clear();
+            if(IsHideForEnt == true)
+            {
+                NavisworksApp.ActiveDocument.CurrentSelection.AddRange(HideItemSetEnt);
+            }
+            else
+            {
+                NavisworksApp.ActiveDocument.CurrentSelection.AddRange(HideItemSetStn);
+            }
+;
+        }
+
+
+        //Input control for not to type strings except integer
         private void keyPress_IsIntOrBack(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void btSaveView_MouseUp(object sender, MouseEventArgs e)
+        {
+            SaveViewpoint();
+        }
+
+        //Invert Hide
+        private void HideForStn_MouseUp(object sender, MouseEventArgs e)
+        {
+            int entFlNum;
+            int stnFlNum;
+            int.TryParse(tbEntFloor.Text, out entFlNum);
+            int.TryParse(tbStnFloor.Text, out stnFlNum);
+            int dongStartNum = DongNumParser(numBuildingStart.Text);
+            int dongEndNum = DongNumParser(numBuildingEnd.Text);
+            var dongNames = CreateDongNameSet(dongStartNum, dongEndNum);
+            foreach(string dongName in dongNames)
+            {
+                HideItemsByFloor(entFlNum, stnFlNum, dongName, true);
+            }
+        }
+
+        private int DongNumParser(string buildingStart)
+        {
+            int a1;
+            int.TryParse(buildingStart, out a1);
+            return a1;
+        }
+
+        private void HideForEnt_MouseUp(object sender, MouseEventArgs e)
+        {
+            int entFlNum;
+            int stnFlNum;
+            int.TryParse(tbEntFloor.Text, out entFlNum);
+            int.TryParse(tbStnFloor.Text, out stnFlNum);
+            int dongStartNum = DongNumParser(numBuildingStart.Text);
+            int dongEndNum = DongNumParser(numBuildingEnd.Text);
+            var dongNames = CreateDongNameSet(dongStartNum, dongEndNum);
+            foreach (string dongName in dongNames)
+            {
+                HideItemsByFloor(entFlNum, stnFlNum, dongName, false);
             }
         }
     }

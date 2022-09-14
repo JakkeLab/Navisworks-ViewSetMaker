@@ -69,6 +69,16 @@
             this.tbBHCategory = new System.Windows.Forms.TextBox();
             this.lbDongTypeName = new System.Windows.Forms.Label();
             this.tbBHDongTypeName = new System.Windows.Forms.TextBox();
+            this.btSaveCurrentView = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbStnFloor = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tbEntFloor = new System.Windows.Forms.TextBox();
+            this.lbFloornumCat = new System.Windows.Forms.Label();
+            this.tbFloornumCat = new System.Windows.Forms.TextBox();
+            this.btSelectHideforEnt = new System.Windows.Forms.Button();
+            this.btSelectHideforStn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbAddinName
@@ -139,7 +149,7 @@
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(3, 350);
+            this.txtStatus.Location = new System.Drawing.Point(2, 571);
             this.txtStatus.Multiline = true;
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(229, 118);
@@ -147,7 +157,7 @@
             // 
             // brProgress
             // 
-            this.brProgress.Location = new System.Drawing.Point(3, 474);
+            this.brProgress.Location = new System.Drawing.Point(2, 695);
             this.brProgress.Name = "brProgress";
             this.brProgress.Size = new System.Drawing.Size(229, 23);
             this.brProgress.TabIndex = 8;
@@ -157,7 +167,7 @@
             // 
             this.numBuildingStart.Enabled = false;
             this.numBuildingStart.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.numBuildingStart.Location = new System.Drawing.Point(62, 188);
+            this.numBuildingStart.Location = new System.Drawing.Point(63, 200);
             this.numBuildingStart.Multiline = true;
             this.numBuildingStart.Name = "numBuildingStart";
             this.numBuildingStart.Size = new System.Drawing.Size(52, 22);
@@ -168,7 +178,7 @@
             // 
             this.lbDongNum.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.lbDongNum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbDongNum.Location = new System.Drawing.Point(1, 170);
+            this.lbDongNum.Location = new System.Drawing.Point(2, 182);
             this.lbDongNum.Name = "lbDongNum";
             this.lbDongNum.Size = new System.Drawing.Size(54, 18);
             this.lbDongNum.TabIndex = 10;
@@ -178,9 +188,9 @@
             // 
             this.lbBuildingStart.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbBuildingStart.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.lbBuildingStart.Location = new System.Drawing.Point(3, 188);
+            this.lbBuildingStart.Location = new System.Drawing.Point(4, 200);
             this.lbBuildingStart.Name = "lbBuildingStart";
-            this.lbBuildingStart.Size = new System.Drawing.Size(48, 22);
+            this.lbBuildingStart.Size = new System.Drawing.Size(54, 22);
             this.lbBuildingStart.TabIndex = 11;
             this.lbBuildingStart.Text = "시작";
             this.lbBuildingStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -189,9 +199,9 @@
             // 
             this.lbBuildingEnd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbBuildingEnd.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.lbBuildingEnd.Location = new System.Drawing.Point(125, 186);
+            this.lbBuildingEnd.Location = new System.Drawing.Point(120, 198);
             this.lbBuildingEnd.Name = "lbBuildingEnd";
-            this.lbBuildingEnd.Size = new System.Drawing.Size(49, 24);
+            this.lbBuildingEnd.Size = new System.Drawing.Size(56, 24);
             this.lbBuildingEnd.TabIndex = 13;
             this.lbBuildingEnd.Text = "끝";
             this.lbBuildingEnd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -200,7 +210,7 @@
             // 
             this.numBuildingEnd.Enabled = false;
             this.numBuildingEnd.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.numBuildingEnd.Location = new System.Drawing.Point(180, 186);
+            this.numBuildingEnd.Location = new System.Drawing.Point(181, 198);
             this.numBuildingEnd.Multiline = true;
             this.numBuildingEnd.Name = "numBuildingEnd";
             this.numBuildingEnd.Size = new System.Drawing.Size(52, 24);
@@ -211,7 +221,7 @@
             // 
             this.lbStandardFloor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbStandardFloor.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.lbStandardFloor.Location = new System.Drawing.Point(125, 279);
+            this.lbStandardFloor.Location = new System.Drawing.Point(127, 518);
             this.lbStandardFloor.Name = "lbStandardFloor";
             this.lbStandardFloor.Size = new System.Drawing.Size(49, 21);
             this.lbStandardFloor.TabIndex = 18;
@@ -222,10 +232,10 @@
             // 
             this.numStandardFloor.Enabled = false;
             this.numStandardFloor.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.numStandardFloor.Location = new System.Drawing.Point(180, 279);
+            this.numStandardFloor.Location = new System.Drawing.Point(182, 518);
             this.numStandardFloor.Multiline = true;
             this.numStandardFloor.Name = "numStandardFloor";
-            this.numStandardFloor.Size = new System.Drawing.Size(52, 21);
+            this.numStandardFloor.Size = new System.Drawing.Size(49, 21);
             this.numStandardFloor.TabIndex = 17;
             this.numStandardFloor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress_IsIntOrBack);
             // 
@@ -233,7 +243,7 @@
             // 
             this.lbEntranceFloor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbEntranceFloor.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.lbEntranceFloor.Location = new System.Drawing.Point(2, 232);
+            this.lbEntranceFloor.Location = new System.Drawing.Point(4, 470);
             this.lbEntranceFloor.Name = "lbEntranceFloor";
             this.lbEntranceFloor.Size = new System.Drawing.Size(49, 21);
             this.lbEntranceFloor.TabIndex = 16;
@@ -244,7 +254,7 @@
             // 
             this.lbPlanPositionFloor.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.lbPlanPositionFloor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbPlanPositionFloor.Location = new System.Drawing.Point(0, 214);
+            this.lbPlanPositionFloor.Location = new System.Drawing.Point(2, 453);
             this.lbPlanPositionFloor.Name = "lbPlanPositionFloor";
             this.lbPlanPositionFloor.Size = new System.Drawing.Size(95, 17);
             this.lbPlanPositionFloor.TabIndex = 15;
@@ -254,7 +264,7 @@
             // 
             this.numEntranceFloor.Enabled = false;
             this.numEntranceFloor.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.numEntranceFloor.Location = new System.Drawing.Point(62, 232);
+            this.numEntranceFloor.Location = new System.Drawing.Point(64, 470);
             this.numEntranceFloor.Multiline = true;
             this.numEntranceFloor.Name = "numEntranceFloor";
             this.numEntranceFloor.Size = new System.Drawing.Size(52, 21);
@@ -264,7 +274,7 @@
             // 
             this.lbUndergroundFloorNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbUndergroundFloorNum.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.lbUndergroundFloorNum.Location = new System.Drawing.Point(3, 279);
+            this.lbUndergroundFloorNum.Location = new System.Drawing.Point(5, 518);
             this.lbUndergroundFloorNum.Name = "lbUndergroundFloorNum";
             this.lbUndergroundFloorNum.Size = new System.Drawing.Size(49, 21);
             this.lbUndergroundFloorNum.TabIndex = 21;
@@ -275,7 +285,7 @@
             // 
             this.lbPlanPositionFloorUnderground.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.lbPlanPositionFloorUnderground.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbPlanPositionFloorUnderground.Location = new System.Drawing.Point(0, 260);
+            this.lbPlanPositionFloorUnderground.Location = new System.Drawing.Point(2, 499);
             this.lbPlanPositionFloorUnderground.Name = "lbPlanPositionFloorUnderground";
             this.lbPlanPositionFloorUnderground.Size = new System.Drawing.Size(105, 17);
             this.lbPlanPositionFloorUnderground.TabIndex = 20;
@@ -285,7 +295,7 @@
             // 
             this.numUndergroundNum.Enabled = false;
             this.numUndergroundNum.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.numUndergroundNum.Location = new System.Drawing.Point(62, 279);
+            this.numUndergroundNum.Location = new System.Drawing.Point(64, 518);
             this.numUndergroundNum.Multiline = true;
             this.numUndergroundNum.Name = "numUndergroundNum";
             this.numUndergroundNum.Size = new System.Drawing.Size(52, 21);
@@ -295,7 +305,7 @@
             // btRun
             // 
             this.btRun.Enabled = false;
-            this.btRun.Location = new System.Drawing.Point(3, 321);
+            this.btRun.Location = new System.Drawing.Point(2, 542);
             this.btRun.Name = "btRun";
             this.btRun.Size = new System.Drawing.Size(229, 23);
             this.btRun.TabIndex = 23;
@@ -318,7 +328,7 @@
             // 
             this.lbDebugOnly.AutoSize = true;
             this.lbDebugOnly.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.lbDebugOnly.Location = new System.Drawing.Point(3, 505);
+            this.lbDebugOnly.Location = new System.Drawing.Point(3, 718);
             this.lbDebugOnly.Name = "lbDebugOnly";
             this.lbDebugOnly.Size = new System.Drawing.Size(83, 17);
             this.lbDebugOnly.TabIndex = 26;
@@ -327,7 +337,7 @@
             // tbDebugDongTypeName
             // 
             this.tbDebugDongTypeName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbDebugDongTypeName.Location = new System.Drawing.Point(86, 558);
+            this.tbDebugDongTypeName.Location = new System.Drawing.Point(86, 771);
             this.tbDebugDongTypeName.Name = "tbDebugDongTypeName";
             this.tbDebugDongTypeName.Size = new System.Drawing.Size(145, 21);
             this.tbDebugDongTypeName.TabIndex = 25;
@@ -335,7 +345,7 @@
             // tbDebugFloorTypeName
             // 
             this.tbDebugFloorTypeName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbDebugFloorTypeName.Location = new System.Drawing.Point(86, 612);
+            this.tbDebugFloorTypeName.Location = new System.Drawing.Point(86, 825);
             this.tbDebugFloorTypeName.Name = "tbDebugFloorTypeName";
             this.tbDebugFloorTypeName.Size = new System.Drawing.Size(145, 21);
             this.tbDebugFloorTypeName.TabIndex = 27;
@@ -343,7 +353,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label1.Location = new System.Drawing.Point(4, 558);
+            this.label1.Location = new System.Drawing.Point(4, 771);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 17);
             this.label1.TabIndex = 28;
@@ -353,7 +363,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label2.Location = new System.Drawing.Point(3, 612);
+            this.label2.Location = new System.Drawing.Point(3, 825);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 17);
             this.label2.TabIndex = 29;
@@ -362,7 +372,7 @@
             // 
             // btDebugFind
             // 
-            this.btDebugFind.Location = new System.Drawing.Point(3, 664);
+            this.btDebugFind.Location = new System.Drawing.Point(3, 877);
             this.btDebugFind.Name = "btDebugFind";
             this.btDebugFind.Size = new System.Drawing.Size(229, 23);
             this.btDebugFind.TabIndex = 30;
@@ -373,7 +383,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label3.Location = new System.Drawing.Point(4, 531);
+            this.label3.Location = new System.Drawing.Point(4, 744);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 17);
             this.label3.TabIndex = 32;
@@ -383,7 +393,7 @@
             // tbDebugCategory
             // 
             this.tbDebugCategory.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbDebugCategory.Location = new System.Drawing.Point(86, 531);
+            this.tbDebugCategory.Location = new System.Drawing.Point(86, 744);
             this.tbDebugCategory.Name = "tbDebugCategory";
             this.tbDebugCategory.Size = new System.Drawing.Size(145, 21);
             this.tbDebugCategory.TabIndex = 31;
@@ -391,7 +401,7 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label4.Location = new System.Drawing.Point(4, 585);
+            this.label4.Location = new System.Drawing.Point(4, 798);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 17);
             this.label4.TabIndex = 34;
@@ -401,7 +411,7 @@
             // tbDebugDongValue
             // 
             this.tbDebugDongValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbDebugDongValue.Location = new System.Drawing.Point(86, 585);
+            this.tbDebugDongValue.Location = new System.Drawing.Point(86, 798);
             this.tbDebugDongValue.Name = "tbDebugDongValue";
             this.tbDebugDongValue.Size = new System.Drawing.Size(145, 21);
             this.tbDebugDongValue.TabIndex = 33;
@@ -409,7 +419,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label5.Location = new System.Drawing.Point(4, 637);
+            this.label5.Location = new System.Drawing.Point(4, 850);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 17);
             this.label5.TabIndex = 36;
@@ -419,14 +429,14 @@
             // tbDebugFloorValue
             // 
             this.tbDebugFloorValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbDebugFloorValue.Location = new System.Drawing.Point(86, 637);
+            this.tbDebugFloorValue.Location = new System.Drawing.Point(86, 850);
             this.tbDebugFloorValue.Name = "tbDebugFloorValue";
             this.tbDebugFloorValue.Size = new System.Drawing.Size(145, 21);
             this.tbDebugFloorValue.TabIndex = 35;
             // 
             // tbDebugMessage
             // 
-            this.tbDebugMessage.Location = new System.Drawing.Point(3, 693);
+            this.tbDebugMessage.Location = new System.Drawing.Point(3, 906);
             this.tbDebugMessage.Multiline = true;
             this.tbDebugMessage.Name = "tbDebugMessage";
             this.tbDebugMessage.Size = new System.Drawing.Size(229, 97);
@@ -470,10 +480,122 @@
             this.tbBHDongTypeName.Size = new System.Drawing.Size(109, 22);
             this.tbBHDongTypeName.TabIndex = 40;
             // 
+            // btSaveCurrentView
+            // 
+            this.btSaveCurrentView.Location = new System.Drawing.Point(127, 470);
+            this.btSaveCurrentView.Name = "btSaveCurrentView";
+            this.btSaveCurrentView.Size = new System.Drawing.Size(105, 23);
+            this.btSaveCurrentView.TabIndex = 42;
+            this.btSaveCurrentView.Text = "Save View";
+            this.btSaveCurrentView.UseVisualStyleBackColor = true;
+            this.btSaveCurrentView.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btSaveView_MouseUp);
+            // 
+            // label6
+            // 
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.label6.Location = new System.Drawing.Point(120, 242);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 24);
+            this.label6.TabIndex = 47;
+            this.label6.Text = "기준층";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tbStnFloor
+            // 
+            this.tbStnFloor.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.tbStnFloor.Location = new System.Drawing.Point(181, 242);
+            this.tbStnFloor.Multiline = true;
+            this.tbStnFloor.Name = "tbStnFloor";
+            this.tbStnFloor.Size = new System.Drawing.Size(52, 24);
+            this.tbStnFloor.TabIndex = 46;
+            this.tbStnFloor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress_IsIntOrBack);
+            // 
+            // label8
+            // 
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.label8.Location = new System.Drawing.Point(4, 245);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(54, 22);
+            this.label8.TabIndex = 45;
+            this.label8.Text = "출입구";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label9.Location = new System.Drawing.Point(2, 226);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(54, 18);
+            this.label9.TabIndex = 44;
+            this.label9.Text = "층 구분";
+            // 
+            // tbEntFloor
+            // 
+            this.tbEntFloor.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.tbEntFloor.Location = new System.Drawing.Point(63, 245);
+            this.tbEntFloor.Multiline = true;
+            this.tbEntFloor.Name = "tbEntFloor";
+            this.tbEntFloor.Size = new System.Drawing.Size(52, 22);
+            this.tbEntFloor.TabIndex = 43;
+            this.tbEntFloor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress_IsIntOrBack);
+            // 
+            // lbFloornumCat
+            // 
+            this.lbFloornumCat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbFloornumCat.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbFloornumCat.Location = new System.Drawing.Point(4, 272);
+            this.lbFloornumCat.Name = "lbFloornumCat";
+            this.lbFloornumCat.Size = new System.Drawing.Size(110, 22);
+            this.lbFloornumCat.TabIndex = 49;
+            this.lbFloornumCat.Text = "층번호 특성 이름";
+            this.lbFloornumCat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tbFloornumCat
+            // 
+            this.tbFloornumCat.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.tbFloornumCat.Location = new System.Drawing.Point(120, 272);
+            this.tbFloornumCat.Multiline = true;
+            this.tbFloornumCat.Name = "tbFloornumCat";
+            this.tbFloornumCat.Size = new System.Drawing.Size(113, 22);
+            this.tbFloornumCat.TabIndex = 48;
+            // 
+            // btSelectHideforEnt
+            // 
+            this.btSelectHideforEnt.Location = new System.Drawing.Point(4, 297);
+            this.btSelectHideforEnt.Name = "btSelectHideforEnt";
+            this.btSelectHideforEnt.Size = new System.Drawing.Size(110, 23);
+            this.btSelectHideforEnt.TabIndex = 50;
+            this.btSelectHideforEnt.Text = "출입구층 기준";
+            this.btSelectHideforEnt.UseVisualStyleBackColor = true;
+            this.btSelectHideforEnt.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HideForEnt_MouseUp);
+            // 
+            // btSelectHideforStn
+            // 
+            this.btSelectHideforStn.Location = new System.Drawing.Point(120, 297);
+            this.btSelectHideforStn.Name = "btSelectHideforStn";
+            this.btSelectHideforStn.Size = new System.Drawing.Size(113, 23);
+            this.btSelectHideforStn.TabIndex = 51;
+            this.btSelectHideforStn.Text = "기준층 기준";
+            this.btSelectHideforStn.UseVisualStyleBackColor = true;
+            this.btSelectHideforStn.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HideForStn_MouseUp);
+            // 
             // UcViewMake
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btSelectHideforStn);
+            this.Controls.Add(this.btSelectHideforEnt);
+            this.Controls.Add(this.lbFloornumCat);
+            this.Controls.Add(this.tbFloornumCat);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.tbStnFloor);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.tbEntFloor);
+            this.Controls.Add(this.btSaveCurrentView);
             this.Controls.Add(this.lbDongTypeName);
             this.Controls.Add(this.tbBHDongTypeName);
             this.Controls.Add(this.label7);
@@ -516,7 +638,7 @@
             this.Controls.Add(this.txtTemplateName);
             this.Controls.Add(this.lbAddinName);
             this.Name = "UcViewMake";
-            this.Size = new System.Drawing.Size(235, 794);
+            this.Size = new System.Drawing.Size(235, 1006);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -565,5 +687,15 @@
         private System.Windows.Forms.TextBox tbBHCategory;
         private System.Windows.Forms.Label lbDongTypeName;
         private System.Windows.Forms.TextBox tbBHDongTypeName;
+        private System.Windows.Forms.Button btSaveCurrentView;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tbStnFloor;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox tbEntFloor;
+        private System.Windows.Forms.Label lbFloornumCat;
+        private System.Windows.Forms.TextBox tbFloornumCat;
+        private System.Windows.Forms.Button btSelectHideforEnt;
+        private System.Windows.Forms.Button btSelectHideforStn;
     }
 }

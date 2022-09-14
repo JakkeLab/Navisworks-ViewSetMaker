@@ -63,6 +63,15 @@
       <HintPath>..\..\..\..\..\..\..\..\..\..\..\Program Files\Autodesk\Navisworks Manage 2021\Autodesk.Navisworks.Automation.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Autodesk.Navisworks.ComApi, Version=18.0.1347.51, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\..\Program Files\Autodesk\Navisworks Manage 2021\Autodesk.Navisworks.ComApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Navisworks.Interop.ComApi, Version=18.0.1347.51, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\..\Program Files\Autodesk\Navisworks Manage 2021\Autodesk.Navisworks.Interop.ComApi.dll</HintPath>
+    </Reference>
     <Reference Include="navisworks.gui.roamer">
       <HintPath>..\..\..\..\..\..\..\..\..\..\..\Program Files\Autodesk\Navisworks Manage 2021\navisworks.gui.roamer.dll</HintPath>
       <Private>False</Private>
