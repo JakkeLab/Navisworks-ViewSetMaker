@@ -199,24 +199,9 @@ namespace ViewSetMaker.Ctr
             NavisworksApp.ActiveDocument.CurrentSelection.AddRange(result);
         }
 
-        private void btDebugFind_MouseUp(object sender, MouseEventArgs e)
+        private void UserControl1_Load(object sender, EventArgs e)
         {
-            try
-            {
-                debugSearchItems();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
 
-        private void keyPress_IsIntOrBack(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)))
-            {
-                e.Handled = true;
-            }
         }
     }
 
