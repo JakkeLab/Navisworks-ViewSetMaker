@@ -167,12 +167,20 @@
             // 
             this.numBuildingStart.Enabled = false;
             this.numBuildingStart.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.numBuildingStart.Location = new System.Drawing.Point(63, 200);
+<<<<<<<<< Temporary merge branch 1
+            this.numBuildingStart.Location = new System.Drawing.Point(62, 172);
+=========
+            this.numBuildingStart.Location = new System.Drawing.Point(62, 188);
+>>>>>>>>> Temporary merge branch 2
             this.numBuildingStart.Multiline = true;
             this.numBuildingStart.Name = "numBuildingStart";
             this.numBuildingStart.Size = new System.Drawing.Size(52, 22);
             this.numBuildingStart.TabIndex = 9;
+<<<<<<<<< Temporary merge branch 1
+            this.numBuildingStart.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numBuildingStart_KeyPress);
+=========
             this.numBuildingStart.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress_IsIntOrBack);
+>>>>>>>>> Temporary merge branch 2
             // 
             // lbDongNum
             // 
@@ -210,12 +218,20 @@
             // 
             this.numBuildingEnd.Enabled = false;
             this.numBuildingEnd.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.numBuildingEnd.Location = new System.Drawing.Point(181, 198);
+<<<<<<<<< Temporary merge branch 1
+            this.numBuildingEnd.Location = new System.Drawing.Point(180, 170);
+=========
+            this.numBuildingEnd.Location = new System.Drawing.Point(180, 186);
+>>>>>>>>> Temporary merge branch 2
             this.numBuildingEnd.Multiline = true;
             this.numBuildingEnd.Name = "numBuildingEnd";
             this.numBuildingEnd.Size = new System.Drawing.Size(52, 24);
             this.numBuildingEnd.TabIndex = 12;
+<<<<<<<<< Temporary merge branch 1
+            this.numBuildingEnd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numBuildingEnd_KeyPress);
+=========
             this.numBuildingEnd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress_IsIntOrBack);
+>>>>>>>>> Temporary merge branch 2
             // 
             // lbStandardFloor
             // 
@@ -232,12 +248,20 @@
             // 
             this.numStandardFloor.Enabled = false;
             this.numStandardFloor.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.numStandardFloor.Location = new System.Drawing.Point(182, 518);
+<<<<<<<<< Temporary merge branch 1
+            this.numStandardFloor.Location = new System.Drawing.Point(180, 224);
+=========
+            this.numStandardFloor.Location = new System.Drawing.Point(180, 279);
+>>>>>>>>> Temporary merge branch 2
             this.numStandardFloor.Multiline = true;
             this.numStandardFloor.Name = "numStandardFloor";
             this.numStandardFloor.Size = new System.Drawing.Size(49, 21);
             this.numStandardFloor.TabIndex = 17;
+<<<<<<<<< Temporary merge branch 1
+            this.numStandardFloor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numStandardFloor_KeyPress);
+=========
             this.numStandardFloor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress_IsIntOrBack);
+>>>>>>>>> Temporary merge branch 2
             // 
             // lbEntranceFloor
             // 
@@ -264,7 +288,11 @@
             // 
             this.numEntranceFloor.Enabled = false;
             this.numEntranceFloor.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.numEntranceFloor.Location = new System.Drawing.Point(64, 470);
+<<<<<<<<< Temporary merge branch 1
+            this.numEntranceFloor.Location = new System.Drawing.Point(62, 224);
+=========
+            this.numEntranceFloor.Location = new System.Drawing.Point(62, 232);
+>>>>>>>>> Temporary merge branch 2
             this.numEntranceFloor.Multiline = true;
             this.numEntranceFloor.Name = "numEntranceFloor";
             this.numEntranceFloor.Size = new System.Drawing.Size(52, 21);
@@ -300,7 +328,11 @@
             this.numUndergroundNum.Name = "numUndergroundNum";
             this.numUndergroundNum.Size = new System.Drawing.Size(52, 21);
             this.numUndergroundNum.TabIndex = 19;
+<<<<<<<<< Temporary merge branch 1
+            this.numUndergroundNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numUndergroundNum_KeyPress);
+=========
             this.numUndergroundNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress_IsIntOrBack);
+>>>>>>>>> Temporary merge branch 2
             // 
             // btRun
             // 
@@ -328,7 +360,7 @@
             // 
             this.lbDebugOnly.AutoSize = true;
             this.lbDebugOnly.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.lbDebugOnly.Location = new System.Drawing.Point(3, 718);
+            this.lbDebugOnly.Location = new System.Drawing.Point(3, 505);
             this.lbDebugOnly.Name = "lbDebugOnly";
             this.lbDebugOnly.Size = new System.Drawing.Size(83, 17);
             this.lbDebugOnly.TabIndex = 26;
@@ -337,7 +369,7 @@
             // tbDebugDongTypeName
             // 
             this.tbDebugDongTypeName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbDebugDongTypeName.Location = new System.Drawing.Point(86, 771);
+            this.tbDebugDongTypeName.Location = new System.Drawing.Point(86, 558);
             this.tbDebugDongTypeName.Name = "tbDebugDongTypeName";
             this.tbDebugDongTypeName.Size = new System.Drawing.Size(145, 21);
             this.tbDebugDongTypeName.TabIndex = 25;
@@ -345,7 +377,7 @@
             // tbDebugFloorTypeName
             // 
             this.tbDebugFloorTypeName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbDebugFloorTypeName.Location = new System.Drawing.Point(86, 825);
+            this.tbDebugFloorTypeName.Location = new System.Drawing.Point(86, 612);
             this.tbDebugFloorTypeName.Name = "tbDebugFloorTypeName";
             this.tbDebugFloorTypeName.Size = new System.Drawing.Size(145, 21);
             this.tbDebugFloorTypeName.TabIndex = 27;
@@ -353,7 +385,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label1.Location = new System.Drawing.Point(4, 771);
+            this.label1.Location = new System.Drawing.Point(4, 558);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 17);
             this.label1.TabIndex = 28;
@@ -363,7 +395,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label2.Location = new System.Drawing.Point(3, 825);
+            this.label2.Location = new System.Drawing.Point(3, 612);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 17);
             this.label2.TabIndex = 29;
@@ -372,7 +404,7 @@
             // 
             // btDebugFind
             // 
-            this.btDebugFind.Location = new System.Drawing.Point(3, 877);
+            this.btDebugFind.Location = new System.Drawing.Point(3, 664);
             this.btDebugFind.Name = "btDebugFind";
             this.btDebugFind.Size = new System.Drawing.Size(229, 23);
             this.btDebugFind.TabIndex = 30;
@@ -383,25 +415,35 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label3.Location = new System.Drawing.Point(4, 744);
+            this.label3.Location = new System.Drawing.Point(4, 531);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 17);
             this.label3.TabIndex = 32;
             this.label3.Text = "Cat";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+<<<<<<<<< Temporary merge branch 1
+            // tbCategory
+            // 
+            this.tbCategory.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tbCategory.Location = new System.Drawing.Point(86, 531);
+            this.tbCategory.Name = "tbCategory";
+            this.tbCategory.Size = new System.Drawing.Size(145, 21);
+            this.tbCategory.TabIndex = 31;
+=========
             // tbDebugCategory
             // 
             this.tbDebugCategory.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbDebugCategory.Location = new System.Drawing.Point(86, 744);
+            this.tbDebugCategory.Location = new System.Drawing.Point(86, 531);
             this.tbDebugCategory.Name = "tbDebugCategory";
             this.tbDebugCategory.Size = new System.Drawing.Size(145, 21);
             this.tbDebugCategory.TabIndex = 31;
+>>>>>>>>> Temporary merge branch 2
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label4.Location = new System.Drawing.Point(4, 798);
+            this.label4.Location = new System.Drawing.Point(4, 585);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 17);
             this.label4.TabIndex = 34;
@@ -411,7 +453,7 @@
             // tbDebugDongValue
             // 
             this.tbDebugDongValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbDebugDongValue.Location = new System.Drawing.Point(86, 798);
+            this.tbDebugDongValue.Location = new System.Drawing.Point(86, 585);
             this.tbDebugDongValue.Name = "tbDebugDongValue";
             this.tbDebugDongValue.Size = new System.Drawing.Size(145, 21);
             this.tbDebugDongValue.TabIndex = 33;
@@ -419,7 +461,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label5.Location = new System.Drawing.Point(4, 850);
+            this.label5.Location = new System.Drawing.Point(4, 637);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 17);
             this.label5.TabIndex = 36;
@@ -429,14 +471,16 @@
             // tbDebugFloorValue
             // 
             this.tbDebugFloorValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbDebugFloorValue.Location = new System.Drawing.Point(86, 850);
+            this.tbDebugFloorValue.Location = new System.Drawing.Point(86, 637);
             this.tbDebugFloorValue.Name = "tbDebugFloorValue";
             this.tbDebugFloorValue.Size = new System.Drawing.Size(145, 21);
             this.tbDebugFloorValue.TabIndex = 35;
             // 
+<<<<<<<<< Temporary merge branch 1
+=========
             // tbDebugMessage
             // 
-            this.tbDebugMessage.Location = new System.Drawing.Point(3, 906);
+            this.tbDebugMessage.Location = new System.Drawing.Point(3, 693);
             this.tbDebugMessage.Multiline = true;
             this.tbDebugMessage.Name = "tbDebugMessage";
             this.tbDebugMessage.Size = new System.Drawing.Size(229, 97);
@@ -480,133 +524,29 @@
             this.tbBHDongTypeName.Size = new System.Drawing.Size(109, 22);
             this.tbBHDongTypeName.TabIndex = 40;
             // 
-            // btSaveCurrentView
-            // 
-            this.btSaveCurrentView.Location = new System.Drawing.Point(127, 470);
-            this.btSaveCurrentView.Name = "btSaveCurrentView";
-            this.btSaveCurrentView.Size = new System.Drawing.Size(105, 23);
-            this.btSaveCurrentView.TabIndex = 42;
-            this.btSaveCurrentView.Text = "Save View";
-            this.btSaveCurrentView.UseVisualStyleBackColor = true;
-            this.btSaveCurrentView.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btSaveView_MouseUp);
-            // 
-            // label6
-            // 
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.label6.Location = new System.Drawing.Point(120, 242);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 24);
-            this.label6.TabIndex = 47;
-            this.label6.Text = "기준층";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tbStnFloor
-            // 
-            this.tbStnFloor.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.tbStnFloor.Location = new System.Drawing.Point(181, 242);
-            this.tbStnFloor.Multiline = true;
-            this.tbStnFloor.Name = "tbStnFloor";
-            this.tbStnFloor.Size = new System.Drawing.Size(52, 24);
-            this.tbStnFloor.TabIndex = 46;
-            this.tbStnFloor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress_IsIntOrBack);
-            // 
-            // label8
-            // 
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label8.Location = new System.Drawing.Point(4, 245);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 22);
-            this.label8.TabIndex = 45;
-            this.label8.Text = "출입구";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label9.Location = new System.Drawing.Point(2, 226);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 18);
-            this.label9.TabIndex = 44;
-            this.label9.Text = "층 구분";
-            // 
-            // tbEntFloor
-            // 
-            this.tbEntFloor.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.tbEntFloor.Location = new System.Drawing.Point(63, 245);
-            this.tbEntFloor.Multiline = true;
-            this.tbEntFloor.Name = "tbEntFloor";
-            this.tbEntFloor.Size = new System.Drawing.Size(52, 22);
-            this.tbEntFloor.TabIndex = 43;
-            this.tbEntFloor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPress_IsIntOrBack);
-            // 
-            // lbFloornumCat
-            // 
-            this.lbFloornumCat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbFloornumCat.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbFloornumCat.Location = new System.Drawing.Point(4, 272);
-            this.lbFloornumCat.Name = "lbFloornumCat";
-            this.lbFloornumCat.Size = new System.Drawing.Size(110, 22);
-            this.lbFloornumCat.TabIndex = 49;
-            this.lbFloornumCat.Text = "층번호 특성 이름";
-            this.lbFloornumCat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tbFloornumCat
-            // 
-            this.tbFloornumCat.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tbFloornumCat.Location = new System.Drawing.Point(120, 272);
-            this.tbFloornumCat.Multiline = true;
-            this.tbFloornumCat.Name = "tbFloornumCat";
-            this.tbFloornumCat.Size = new System.Drawing.Size(113, 22);
-            this.tbFloornumCat.TabIndex = 48;
-            // 
-            // btSelectHideforEnt
-            // 
-            this.btSelectHideforEnt.Location = new System.Drawing.Point(4, 297);
-            this.btSelectHideforEnt.Name = "btSelectHideforEnt";
-            this.btSelectHideforEnt.Size = new System.Drawing.Size(110, 23);
-            this.btSelectHideforEnt.TabIndex = 50;
-            this.btSelectHideforEnt.Text = "출입구층 기준";
-            this.btSelectHideforEnt.UseVisualStyleBackColor = true;
-            this.btSelectHideforEnt.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HideForEnt_MouseUp);
-            // 
-            // btSelectHideforStn
-            // 
-            this.btSelectHideforStn.Location = new System.Drawing.Point(120, 297);
-            this.btSelectHideforStn.Name = "btSelectHideforStn";
-            this.btSelectHideforStn.Size = new System.Drawing.Size(113, 23);
-            this.btSelectHideforStn.TabIndex = 51;
-            this.btSelectHideforStn.Text = "기준층 기준";
-            this.btSelectHideforStn.UseVisualStyleBackColor = true;
-            this.btSelectHideforStn.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HideForStn_MouseUp);
-            // 
+>>>>>>>>> Temporary merge branch 2
             // UcViewMake
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btSelectHideforStn);
-            this.Controls.Add(this.btSelectHideforEnt);
-            this.Controls.Add(this.lbFloornumCat);
-            this.Controls.Add(this.tbFloornumCat);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.tbStnFloor);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.tbEntFloor);
-            this.Controls.Add(this.btSaveCurrentView);
+<<<<<<<<< Temporary merge branch 1
+=========
             this.Controls.Add(this.lbDongTypeName);
             this.Controls.Add(this.tbBHDongTypeName);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tbBHCategory);
             this.Controls.Add(this.tbDebugMessage);
+>>>>>>>>> Temporary merge branch 2
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbDebugFloorValue);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbDebugDongValue);
             this.Controls.Add(this.label3);
+<<<<<<<<< Temporary merge branch 1
+            this.Controls.Add(this.tbCategory);
+=========
             this.Controls.Add(this.tbDebugCategory);
+>>>>>>>>> Temporary merge branch 2
             this.Controls.Add(this.btDebugFind);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -638,7 +578,11 @@
             this.Controls.Add(this.txtTemplateName);
             this.Controls.Add(this.lbAddinName);
             this.Name = "UcViewMake";
-            this.Size = new System.Drawing.Size(235, 1006);
+<<<<<<<<< Temporary merge branch 1
+            this.Size = new System.Drawing.Size(235, 697);
+=========
+            this.Size = new System.Drawing.Size(235, 794);
+>>>>>>>>> Temporary merge branch 2
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -676,26 +620,23 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btDebugFind;
         private System.Windows.Forms.Label label3;
+<<<<<<<<< Temporary merge branch 1
+        private System.Windows.Forms.TextBox tbCategory;
+=========
         private System.Windows.Forms.TextBox tbDebugCategory;
+>>>>>>>>> Temporary merge branch 2
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbDebugDongValue;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbDebugFloorValue;
+<<<<<<<<< Temporary merge branch 1
+=========
         private System.Windows.Forms.TextBox tbDebugMessage;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tbBHCategory;
         private System.Windows.Forms.Label lbDongTypeName;
         private System.Windows.Forms.TextBox tbBHDongTypeName;
-        private System.Windows.Forms.Button btSaveCurrentView;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox tbStnFloor;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox tbEntFloor;
-        private System.Windows.Forms.Label lbFloornumCat;
-        private System.Windows.Forms.TextBox tbFloornumCat;
-        private System.Windows.Forms.Button btSelectHideforEnt;
-        private System.Windows.Forms.Button btSelectHideforStn;
+>>>>>>>>> Temporary merge branch 2
     }
 }
