@@ -156,19 +156,27 @@ namespace ViewSetMaker.Ctr
                                                 Properties.FindPropertyByDisplayName(tbDebugFloorTypeName.Text))) > Int32.Parse(tbDebugFloorValue.Text)));
             }
             return result;
+
         }
-        private void btDebugFind_MouseUp(object sender, MouseEventArgs e)
+
+        //Hide Objects
+        private int HideItems(List<ModelItem> ItemsToHide)
         {
+            var ActDc = NavisworksApp.ActiveDocument;
+            var ItemstoHide = new List<ModelItem>();
+
             try
             {
-                var ModelItems = debugSearchItems();
-                ShowSelectedModelItem(ModelItems);
+                ActDc.Models.SetHidden(ItemstoHide, true);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+            
             }
+        return 0;
         }
+
+        /***<--------------------------Winform Controls-------------------------->***/
 
         //Input control for not to type strings except integer
         private void keyPress_IsIntOrBack(object sender, KeyPressEventArgs e)
@@ -197,7 +205,8 @@ namespace ViewSetMaker.Ctr
                     var ModelItems = CreateHideItemSet(DongName, tbEntFloor.Text);
                     ModelItemSet.AddRange(ModelItems);
                 }
-                ShowSelectedModelItem(ModelItemSet);
+                HideItems(ModelItemSet);
+                // ShowSelectedModelItem(ModelItemSet);
             }
             catch (Exception ex)
             {
@@ -220,8 +229,17 @@ namespace ViewSetMaker.Ctr
 
         }
 
-        private void btTestModelSet_MouseUp(object sender, MouseEventArgs e)
+        private void btDebugFind_MouseUp(object sender, MouseEventArgs e)
         {
+            try
+            {
+                var ModelItems = debugSearchItems();
+                ShowSelectedModelItem(ModelItems);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 
